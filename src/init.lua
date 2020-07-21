@@ -37,7 +37,7 @@ function SoundStablizer:getDecibals(rootMeanSquare)
 end
 
 function SoundStablizer:getRootMeanSquare(decibals)
-	local rootMeanSquare 10 ^ (decibals / 20)
+	local rootMeanSquare = 10 ^ (decibals / 20)
 	return rootMeanSquare
 end
 
