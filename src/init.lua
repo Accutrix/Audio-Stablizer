@@ -11,7 +11,7 @@ SoundStablizer.__index = SoundStablizer
 function SoundStablizer:update()
 	local currentVolume = self:getVolume()
 	self.loudestVolume = math.max(self.loudestVolume, currentVolume)
-	self.historyBuffer[#self.historyBuffer+1] currentVolume
+	self.historyBuffer[#self.historyBuffer+1] = currentVolume
 	
 	if currentVolume > self.maxVolume then
 		local newVolume = math.max(self.sound.Volume * (math.min(currentVolume, self.maxVolume) / 1000), 0.01)
